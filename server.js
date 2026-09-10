@@ -6,7 +6,7 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const app = express();
 app.use(express.json({ limit: "2mb" }));
-app.use(express.static("public"));
+app.use(express.static("."));
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
